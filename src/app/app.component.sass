@@ -6,3 +6,20 @@ $primary-color: #FAEBD7
   overflow: auto
   background-color: $primary-color
 
+.products--grid
+  display: flex
+  flex-direction: column
+  div
+    img
+      width: 70%
+      height: 70%
+      border-radius: 10%
+    h2, p
+      margin: 0
+
+  @media screen and ( min-width: 1200px  )
+    .products--grid
+      display: grid
+      grid-template-columns: repeat(5,1fr)
+      gap: 15px
+
