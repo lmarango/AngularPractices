@@ -1,3 +1,11 @@
+<!--CLASES Y ESTILOS-->
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">texto TECTO  teres</p>
+<hr>
 <!--NGSWITCH-->
 <input type="text" required [(ngModel)]="person.name">
 <div [ngSwitch]="person.name">
@@ -11,7 +19,7 @@
     Hola Luis, Match!
   </p>
   <p *ngSwitchDefault>
-    No hay Match :(
+    No hay Match :
   </p>
 </div>
 <!--NGFOR OBJS-->
