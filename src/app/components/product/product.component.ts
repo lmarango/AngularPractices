@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit, Input} from '@angular/core';
+import { Product } from "../../models/product.model";
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.sass']
 })
 export class ProductComponent {
-  product={
-    name: 'Product 1',
-    image: './assets/images/default.jpg',
-    price: 100
-  }
+  @Input() product: Product = {
+    id:'',
+    price:0,
+    image:'',
+    name: ''
+  };
   constructor(){}
   ngOnInit(): void {}
 }
